@@ -26,20 +26,17 @@ jobs:
         with:
           node-version: 22
           cache: npm
-          cache-dependency-path: molecular-meteor/package-lock.json
 
       - name: Install dependencies
         run: npm ci
-        working-directory: ./molecular-meteor
 
       - name: Build site
         run: npm run build
-        working-directory: ./molecular-meteor
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./molecular-meteor/dist
+          path: ./dist
 
   deploy:
     needs: build
