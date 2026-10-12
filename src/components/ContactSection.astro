@@ -1,0 +1,94 @@
+<footer class="contact-section" id="contact" aria-labelledby="contact-title">
+  <div class="shell contact-inner">
+    <div>
+      <p class="eyebrow">04 / 04 · Start a conversation</p>
+      <h2 class="section-heading" id="contact-title">Contact</h2>
+      <p class="contact-copy">Interested in biomedical science, research, or the next opportunity to learn and contribute.</p>
+    </div>
+    <div class="contact-details">
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/laurajatkinson" target="_blank" rel="noreferrer">LinkedIn · laurajatkinson <span aria-hidden="true">↗</span></a>
+      </div>
+      <p class="fine-print">Laura Atkinson · Biomedical Science Student</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .contact-section {
+    padding-block: 70px;
+    background: var(--green-dark);
+    color: var(--white);
+  }
+
+  .contact-inner {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: end;
+  }
+
+  .eyebrow {
+    margin: 0 0 14px;
+    color: var(--lime);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .section-heading {
+    margin: 0;
+    font-family: var(--serif);
+    font-size: 44px;
+    font-weight: 400;
+    line-height: 1.1;
+  }
+
+  .contact-copy {
+    max-width: 430px;
+    margin: 16px 0 0;
+    color: #d3ded7;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 11px;
+    margin-bottom: 28px;
+  }
+
+  .contact-links a {
+    color: var(--white);
+    font-size: 14px;
+    text-decoration-color: #7da7b2;
+    text-underline-offset: 4px;
+  }
+
+  .contact-links a:hover {
+    color: var(--lime);
+  }
+
+  .contact-links span {
+    color: var(--lime);
+  }
+
+  .fine-print {
+    margin: 0;
+    padding-top: 15px;
+    border-top: 1px solid #49695e;
+    color: #d3ded7;
+    font-size: 12px;
+  }
+
+  @media (max-width: 700px) {
+    .contact-inner {
+      grid-template-columns: 1fr;
+      gap: 34px;
+    }
+
+    .section-heading {
+      font-size: 36px;
+    }
+  }
+</style>

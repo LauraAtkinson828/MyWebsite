@@ -1,0 +1,101 @@
+<section class="content-section skills-section" id="skills" aria-labelledby="skills-title">
+  <div class="shell">
+    <div class="section-topline">
+      <span class="section-number">02 / 04</span>
+      <div>
+        <p class="eyebrow">Tools and strengths</p>
+        <h2 class="section-heading" id="skills-title">Skills</h2>
+        <p class="section-intro">Add the practical and transferable skills you can confidently discuss with an employer.</p>
+      </div>
+    </div>
+    <div class="skills-grid">
+      <article>
+        <span class="skill-index">A</span>
+        <h3>Scientific Research</h3>
+        <p>Literature review, critical appraisal, and interpreting scientific evidence.</p>
+      </article>
+      <article>
+        <span class="skill-index">B</span>
+        <h3>Data Analysis</h3>
+        <p>Analysing and interpreting complex biological and health-related data.</p>
+      </article>
+      <article>
+        <span class="skill-index">C</span>
+        <h3>Scientific Communication</h3>
+        <p>Translating complex scientific concepts into clear, audience-appropriate messages.</p>
+      </article>
+      <article>
+        <span class="skill-index">D</span>
+        <h3>Collaboration &amp; Leadership</h3>
+        <p>Developed through peer mentoring, group projects, networking events, and professional engagement.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  .skills-section {
+    background: #e9eee7;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    border-top: 1px solid #cbd5cc;
+    border-bottom: 1px solid #cbd5cc;
+  }
+
+  article {
+    min-height: 190px;
+    padding: 21px 22px 23px 0;
+  }
+
+  article + article {
+    padding-left: 22px;
+    border-left: 1px solid #cbd5cc;
+  }
+
+  .skill-index {
+    color: var(--coral);
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  h3 {
+    margin: 20px 0 6px;
+    font-family: var(--serif);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 800px) {
+    .skills-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    article {
+      min-height: 160px;
+      padding-left: 0;
+    }
+
+    article + article {
+      padding-left: 16px;
+    }
+
+    article:nth-child(3) {
+      border-left: 0;
+    }
+
+    article:nth-child(n + 3) {
+      border-top: 1px solid #cbd5cc;
+    }
+  }
+</style>

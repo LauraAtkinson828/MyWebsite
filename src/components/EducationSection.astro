@@ -1,0 +1,110 @@
+<section class="content-section" id="education" aria-labelledby="education-title">
+  <div class="shell">
+    <div class="section-topline">
+      <span class="section-number">03 / 04</span>
+      <div>
+        <p class="eyebrow">Academic background</p>
+        <h2 class="section-heading" id="education-title">Education</h2>
+      </div>
+    </div>
+    <div class="education-list">
+      <article class="education-row">
+        <div>
+          <h3>BSc Biomedical Science</h3>
+          <p class="education-meta">University of Liverpool</p>
+          <p class="module-label">Selected modules</p>
+          <ul class="module-list">
+            <li>Genetics and Immunology</li>
+            <li>Cellular Basis of Health and Disease</li>
+            <li>Metabolism</li>
+            <li>Cellular Systems and Physiology</li>
+            <li>Molecular Clinical and Translational Cancer</li>
+            <li>Emerging Therapeutic Modalities</li>
+          </ul>
+        </div>
+        <span class="study-date">Current</span>
+      </article>
+      <article class="education-row">
+        <div>
+          <h3>A levels</h3>
+          <p class="education-meta">Carmel College</p>
+          <p class="qualification-details">Maths · Biology · Chemistry</p>
+        </div>
+        <span class="study-date">Sep 2021 – Jun 2023</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  .education-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 25px 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .education-row:last-child {
+    border-bottom: 1px solid var(--line);
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 600;
+  }
+
+  .education-meta,
+  .module-label,
+  .qualification-details,
+  .study-date {
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  .education-meta,
+  .qualification-details {
+    margin: 7px 0 0;
+  }
+
+  .module-label {
+    margin: 19px 0 7px;
+    color: var(--green);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .module-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px 24px;
+    margin: 0;
+    padding: 0;
+    color: var(--ink);
+    font-size: 13px;
+    list-style: none;
+  }
+
+  .module-list li::before {
+    margin-right: 9px;
+    color: var(--coral);
+    content: '·';
+  }
+
+  .study-date {
+    flex: 0 0 auto;
+  }
+
+  @media (max-width: 600px) {
+    .education-row {
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .module-list {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,166 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Laura Atkinson | Biomedical Science Student',
+  description = 'Laura Atkinson is a biomedical science student interested in research, medicine, and pharmaceutical science.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#f4f5f0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    font-family: 'DM Sans', sans-serif;
+    color: #172d3c;
+    background: #f2f6f7;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    --paper: #f2f6f7;
+    --white: #ffffff;
+    --ink: #172d3c;
+    --green: #087d91;
+    --green-dark: #092d46;
+    --muted: #5b6e79;
+    --line: #d7e1e5;
+    --lime: #82dcd7;
+    --coral: #53b9d0;
+    --serif: 'Newsreader', Georgia, serif;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    min-width: 320px;
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  body,
+  a,
+  button {
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  a:focus-visible {
+    outline: 3px solid var(--coral);
+    outline-offset: 4px;
+  }
+
+  .shell {
+    width: min(1160px, calc(100% - 64px));
+    margin-inline: auto;
+  }
+
+  .eyebrow {
+    margin: 0 0 18px;
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  .section-heading {
+    margin: 0;
+    font-family: var(--serif);
+    font-size: 44px;
+    font-weight: 400;
+    line-height: 1.1;
+  }
+
+  .section-intro {
+    max-width: 540px;
+    margin: 14px 0 0;
+    color: var(--muted);
+  }
+
+  .content-section {
+    padding-block: 92px;
+    border-top: 1px solid var(--line);
+  }
+
+  .section-topline {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 24px;
+    margin-bottom: 42px;
+  }
+
+  .section-number {
+    padding-top: 9px;
+    color: var(--coral);
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .placeholder {
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  @media (max-width: 700px) {
+    .shell {
+      width: min(100% - 40px, 540px);
+    }
+
+    .content-section {
+      padding-block: 66px;
+    }
+
+    .section-topline {
+      grid-template-columns: 44px 1fr;
+      gap: 14px;
+      margin-bottom: 30px;
+    }
+
+    .section-heading {
+      font-size: 36px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      scroll-behavior: auto !important;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+</style>
